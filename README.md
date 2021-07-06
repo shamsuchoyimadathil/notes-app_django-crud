@@ -23,7 +23,9 @@ DeleteView for deleting as the name suggest
 
 image uploading, Forms, sqlite3 database is also used in this app . 
 
-some images of my this notes app .it will help you to get a idea of this :
+some images of my this notes app .it will help you to get a idea of this .
+
+also this is my first django project also first git repository
 
 
 app mainpage . the write notes button will redirect the page to the add note
