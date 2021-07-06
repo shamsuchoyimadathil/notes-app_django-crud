@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;   
+}
+
+.allnotes_head{
+    width: 100%;
+    height: 4rem;  
+    background-color: #2F4F4F; 
+}
+
+.allnotes_head a{
+    font-weight: bolder;
+    text-decoration: none;
+    cursor: pointer;
+    position:relative;
+    color :white;
+    position: relative;
+    top: .5rem;
+    left: 2rem;
+    font-size: 1.2rem;
+    margin-left:1.5rem ;
+}
+
+.allnotes_head a:hover,
+.allnotes_head a:active{
+    border-bottom: 1px solid white;
+    font-size: 1.5rem;
+} 
+
+.allnotes-body ul {
+    width: 80%;
+    height: 7rem;
+    border: 1px solid gray;
+    margin: 1rem 5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+
+}
+
+.allnotes-body ul p{
+    font-size: 20px;
+    color:#8B0000 ;
+}
+
+.allnotes-body ul p:hover{
+    color: green;   
+}
+
+.allnotes-body li a{
+    text-decoration: none;
+}
+
+
+
+li{
+    list-style: none;
+
+}

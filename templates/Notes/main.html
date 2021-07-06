@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Notes 
+{% endblock title %} 
+{% block css %}  {% static 'styles/main.css' %} {% endblock css %}
+
+
+
+{% block content %}
+    <div class="main__head">
+        <a href="{% url 'all-notes' %}">All notes</a>
+    </div>
+    
+
+    <div class="main-body">
+        <h1 class="main_body-head">Notes</h1> 
+        <p class="main_body-para">Write your thoughts with smile here </p> 
+        <button class="main_body-btn" type="submit" onclick="location.href='{% url 'add-notes' %}'" >  Write Your notes </button>
+    </div>
+    
+{% endblock content %}

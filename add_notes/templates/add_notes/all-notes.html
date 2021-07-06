@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    All notes
+{% endblock title %}
+
+{% block css %}  {% static 'styles/all-notes.css' %} {% endblock css %}
+
+{% block content %}
+      <div class="allnotes_head">
+        <a href="{% url 'main-page' %}">Home</a>
+    </div>
+
+    <div class="allnotes-body">
+        
+            {% for a in all_notes %}
+                <ul>
+                <li><a href="{% url 'detail-note' a.pk %}"> <p>{{a.name}} </p><br> </a> {{a.note}} </li>
+                </ul>
+            {% endfor %}
+        
+    </div>
+
+{% endblock content %}

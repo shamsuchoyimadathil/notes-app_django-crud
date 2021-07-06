@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Your Notes
+{% endblock title %}
+
+{% block css %}  {% static 'styles/add-notes.css' %} {% endblock css %}
+
+{% block content %}
+    <div class="addnotes_head">
+       <a href="{% url 'all-notes' %}">All notes</a>
+       <a href="{% url 'main-page' %}">Home</a>
+
+    </div>
+    <section>
+        <form action="" method="POST" enctype="multipart/form-data" class="addnotes__body" >
+        
+        <div>
+             <h1>Your Notes here</h1> 
+                {% csrf_token %} 
+
+                {% for a in form %}
+                    <div>
+                        <ul>
+                            <li>{{a.label_tag}}</li>
+                            <li>{{a}}</li>
+                            <li>{{a.errors}}</li>
+                        </ul>
+                    </div>
+                {% endfor %}
+
+            <button type="submit">Save Notes</button>
+        
+        </div>
+           
+        </form>
+    </section>
+
+   
+
+{% endblock content %}  

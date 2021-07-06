@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Note Detail
+{% endblock title %}
+{% block css %}  {% static 'styles/detail-notes.css' %} {% endblock css %}
+
+{% block content %}
+    <div class="detailnote_head">
+       <a href="{% url 'all-notes' %}">All notes</a>
+       <a href="{% url 'main-page' %}">Home</a>
+    </div>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div class="detailnote_body">
+            <h1 class="detailnote_body-head">{{detail.name}}</h1>
+            <p class="detailnote_body-note">{{detail.note}}</p>
+            <img class="detailnote_body-img" src="{{detail.image.url}}">  
+        </div>
+        
+        
+    </form> 
+
+    <form method="POST" action="{% url 'delete-note' detail.id %}">
+        {% csrf_token %}
+        <input type="submit" value="Delete" class="detailnote_delete-btn">
+    </form>
+
+    <form method="" action="{% url 'update-note' detail.id %}">
+        {% csrf_token %}
+        <input type="submit" value="Update" class="detailnote_edit-btn">
+    
+    </form>
+    
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block title %}
+    Thank you 
+{% endblock title %} 
+{% block css %}  {% static 'styles/thank-you.css' %} {% endblock css %}
+
+{% block content %}
+
+    <div class="thankyou__head">
+       <a href="{% url 'all-notes' %}">All notes</a>
+       <a href="{% url 'main-page' %}">Home</a>
+
+    </div>
+    
+    <section class="thankyou__body">
+        <h1>Thankyou for submitting!</h1>
+    </section>
+   
+
+{% endblock content %}
